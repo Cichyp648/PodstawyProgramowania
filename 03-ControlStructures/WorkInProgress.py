@@ -5,7 +5,7 @@ speed_limit = 140
 car_speed = int( input('Enter car speed (km/h): ') )
 
 if car_speed > speed_limit:
-    print(f'Your speed is {...}km/h')
+    print(f'Your speed is {car_speed}km/h')
     print('Warning: speed limit exceeded!!')
     
 ###
@@ -29,7 +29,7 @@ total_tasks = 20
 tasks_ok = int(input('Correctly completed tasks: '))
 test_passed = False
 
-if total_tasks - tasks_ok  >= total_tasks / 2:
+if total_tasks - tasks_ok  <= total_tasks / 2:
     test_passed = True
 
 if test_passed:
@@ -45,9 +45,9 @@ else:
 number = int(input('Enter number: '))
 
 if number % 2 == 0:
-    print(f'{...} is even')
+    print(f'{number} is even')
 else:
-    print(f'{...} is odd')  
+    print(f'{number} is odd')  
     
     
 ###
@@ -97,7 +97,8 @@ else:
 # driving mode.
 #
 driving_mode = input('Enter driving mode (A/M/E):')
-distance = int(input('Enter distance in km'))
+distance = int(input('Enter distance in km: '))
+fuel_consumption = 0
 
 if driving_mode == 'A':
     fuel_consumption = 7 # liters per 100km
@@ -138,6 +139,7 @@ print(f'{number1} {operator} {number2} = {result}')
 # month number (1..12)
 #
 month = int(input('Enter month number (1..12): '))
+quarter = 4
 
 if month >= 10:
     quarter = 4
@@ -222,9 +224,9 @@ else:
 
 message = f'Day {day} for the month {month}'
 if day_ok:
-    print('{message} is correct')
+    print(f'{message} is correct')
 else:
-    print('{message} is incorrect')
+    print(f'{message} is incorrect')
     
     
 ###
@@ -248,15 +250,15 @@ print(university_expanded) # expanded university name
 # Encrypts text using Caesar Code, shifting each letter
 # in the alphabet right one position
 #
-plain_text = 'The early bird catches the worm'
-encrypted_text = ''
-
-for char in plain_text:
-    char = char(ord(char) + 1)
-    encrypted_text += char
-
-print(plain_text)
-print(encrypted_text)
+#plain_text = 'The early bird catches the worm'
+#encrypted_text = ''
+#
+#for char in plain_text:
+#    char = char(ord(char) + 1)
+#    encrypted_text += char
+#
+#print(plain_text)
+#print(encrypted_text)
 
 
 ###
@@ -330,12 +332,12 @@ print(f"Aritmethic mean: {total_sum/iteration}")
 ###
 # Calculates the sum of even numbers from 1 to a given number N
 #
-N = 10
+n = int(input('Select a number: '))
 sum_even = 0
 i = 1
 # Calculate the sum of even numbers
-while i < N + 1:
+while i < n + 1:
     if i % 2 == 0:
         sum_even += i
 
-print(f"The sum of even numbers from 1 to {N} is: {sum_even}")
+print(f"The sum of even numbers from 1 to {n} is: {sum_even}")

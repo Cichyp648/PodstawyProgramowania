@@ -12,4 +12,4 @@ for i in range(len(matrix)):
 # Print the modified matrix
 print("Modified Matrix:")
 for row in matrix:
-    print(" ".join(map(str, row)))
+    print(row)
